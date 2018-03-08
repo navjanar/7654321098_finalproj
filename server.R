@@ -40,8 +40,8 @@ my.server <- function(input, output) {
   
   output$table <- renderDataTable({
     DT::datatable((select(changing_data(), c("original_title", "overview", "runtime", "vote_average"))), 
-                  options = list(paging = FALSE))
-  }, rownames = FALSE)
+                  options = list(paging = FALSE), rownames = FALSE)
+  })
   
   output$plot <- renderPlot({
     plot_data <- filter(changing_data(), budget != 0) %>% filter(revenue != 0)
