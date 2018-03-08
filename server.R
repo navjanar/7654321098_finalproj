@@ -26,7 +26,6 @@ my.server <- function(input, output) {
     curr_data <<- sample_n(curr_data, num)
   })
   
-  
   output$table <- renderDataTable({
     display_data <- select(changing_data(), c("original_title", "release_date", "overview", "runtime"))
   }, rownames = FALSE)

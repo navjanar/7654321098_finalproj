@@ -3,7 +3,7 @@ library(shinycssloaders)
 
 my.ui <- fluidPage(
   titlePanel("Random Movie Generator"),
-  
+
   sidebarPanel(
     selectInput("lang", h3("Pick a language:"), choices = c("Chinese" = "zh", "English" = "en", "French" = "fr", "German" = "de", 
                                                             "Italian" = "it", "Japanese" = "ja", "Korean" = "ko", "Russian" = "ru", 
